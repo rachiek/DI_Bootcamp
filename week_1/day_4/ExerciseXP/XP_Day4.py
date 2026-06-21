@@ -15,13 +15,13 @@
 # Concatenate my_fav_numbers and friend_fav_numbers to create a new set called our_fav_numbers.
 # Note: Sets are unordered collections, so ensure no duplicate numbers are added.
 
-# my_fav_numbers = {11,91,115}
-# my_fav_numbers.add(25)
-# my_fav_numbers.add(55)
-# my_fav_numbers.remove(55)
-# friend_fav_numbers = {2,16,87}
-# our_fav_numbers = my_fav_numbers | friend_fav_numbers
-# print(our_fav_numbers)
+my_fav_numbers = {11,91,115}
+my_fav_numbers.add(25)
+my_fav_numbers.add(55)
+my_fav_numbers.remove(55)
+friend_fav_numbers = {2,16,87}
+our_fav_numbers = my_fav_numbers | friend_fav_numbers
+print(our_fav_numbers)
 
 # 🌟 Exercise 2: Tuple
 # Key Python Topics:
@@ -55,14 +55,14 @@
 # Empty the list.
 # Print the final state of the list.
 
-# basket = ["Banana", "Apples", "Oranges", "Blueberries"]
-# basket.remove("Banana")
-# basket.remove("Blueberries")
-# basket.append("Kiwi")
-# basket.insert(0,"Apples")
-# print(basket.count("Apples"))
-# basket.clear()
-# print(basket)
+basket = ["Banana", "Apples", "Oranges", "Blueberries"]
+basket.remove("Banana")
+basket.remove("Blueberries")
+basket.append("Kiwi")
+basket.insert(0,"Apples")
+print(basket.count("Apples"))
+basket.clear()
+print(basket)
 
 # 🌟 Exercise 4: Floats
 # Key Python Topics:
@@ -80,16 +80,16 @@
 # Avoid hard-coding each number manually.
 # Think: Can you generate this sequence using a loop or another method?
 
-# mixed_list = []
-# current_num = 1.5
+mixed_list = []
+current_num = 1.5
     
-# while current_num <= 5:
-#     if current_num.is_integer():
-#         mixed_list.append(int(current_num))
-#     else:
-#         mixed_list.append(current_num)
-#     current_num += 0.5
-# print(mixed_list)
+while current_num <= 5:
+    if current_num.is_integer():
+        mixed_list.append(int(current_num))
+    else:
+        mixed_list.append(current_num)
+    current_num += 0.5
+print(mixed_list)
 
 # 🌟 Exercise 5: For Loop
 # Key Python Topics:
@@ -102,19 +102,19 @@
 
 # Write a for loop to print all numbers from 1 to 20, inclusive.
 
-# list = []
-# for x in range (1, 20+1):
-#     list.append(x)
+list = []
+for x in range (1, 20+1):
+    list.append(x)
 
-# print(list)
+print(list)
 
 # Write another for loop that prints every number from 1 to 20 where the index is even.
 
-# list2 = []
-# for y in range (2, 20+1, 2):
-#     list2.append(y)
+list2 = []
+for y in range (2, 20+1, 2):
+    list2.append(y)
 
-# print (list2)
+print (list2)
 
 
 # 🌟 Exercise 6: While Loop
@@ -129,15 +129,15 @@
 # Use an input to ask the user to enter their name.
 # Using a while True loop, check if the user gave a proper name (not digits and at least 3 letters long)
 # # hint: check for the method isdigit()
-# while True:
-#     name = input ('Enter your name: ')
-#     if name.isdigit():
-#         print ('Name may not contain digits')
-#     elif len(name) < 3 :
-#         print ('Name must be longer than 3 letters!')
-#     else: 
-#         print ('Thank you')
-#         break
+while True:
+    name = input ('Enter your name: ')
+    if name.isdigit():
+        print ('Name may not contain digits')
+    elif len(name) < 3 :
+        print ('Name must be longer than 3 letters!')
+    else: 
+        print ('Thank you')
+        break
 
 # if the input is incorrect, keep asking for the correct input until it is correct
 # if the input is correct print “thank you” and break the loop
@@ -165,13 +165,13 @@
 # If not, print:
 # "You chose a new fruit. I hope you enjoy it!"
 
-# fruit_list = input ('Enter your favorite fruits separated by spaces: ')
-# favorite_fruits = fruit_list.split()
-# chosen_fruit = input("Enter the name of any fruit: ")
-# if chosen_fruit in favorite_fruits:
-#     print("You chose one of your favorite fruits! Enjoy!")
-# else:
-#     print("You chose a new fruit. I hope you enjoy it!")
+fruit_list = input ('Enter your favorite fruits separated by spaces: ')
+favorite_fruits = fruit_list.split()
+chosen_fruit = input("Enter the name of any fruit: ")
+if chosen_fruit in favorite_fruits:
+    print("You chose one of your favorite fruits! Enjoy!")
+else:
+    print("You chose a new fruit. I hope you enjoy it!")
 
 # 🌟 Exercise 8: Pizza Toppings
 # Key Python Topics:
@@ -190,7 +190,16 @@
 # After exiting the loop, print all the toppings and the total cost of the pizza.
 # The base price is $10, and each topping adds $2.50.
 
+pizza_toppings = []
 
+while True:
+    topping = input("Add a topping or write quit: ") 
+    if topping == 'quit':
+        break  
+    pizza_toppings.append(topping)
+    print(f"Adding {topping} to your pizza.")
+cost = 10.00 + float(len(pizza_toppings)) * 2.50
+print(f"The total cost of your pizza is: ${cost}")
 
 # 🌟 Exercise 9: Cinemax Tickets
 # Key Python Topics:
