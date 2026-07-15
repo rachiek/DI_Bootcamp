@@ -45,10 +45,28 @@ class Farm:
         info += "\n   E-I-E-I-O"
 
         return info
-# Test
+    
+    def get_animal_types(self):
+        return sorted(self.animals.keys())
+    
+    def get_short_info(self):
+        animal_list = []
+        for animal, count in self.animals.items():
+            if count > 1:
+                animal_list.append(animal + 's')  # pluralize
+            else:
+                animal_list.append(animal)
+        animals_str = ', '.join(animal_list)
+        return f"{self.name}'s farm has {animals_str}."
+    
+
 macdonald = Farm("McDonald")
 macdonald.add_animal('cow', 5)
 macdonald.add_animal('sheep')
 macdonald.add_animal('sheep')
 macdonald.add_animal('goat', 12)
 print(macdonald.get_info())
+print(macdonald.get_animal_types())
+print(macdonald.get_short_info())
+
+Farm.add_animal = lambda self, **kwargs: [self.add_animal(animal, count) for animal, count in kwargs.items()]
