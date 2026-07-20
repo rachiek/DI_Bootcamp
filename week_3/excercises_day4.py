@@ -25,38 +25,38 @@
 # Enter sentence length (2-20): 25
 # Please enter a number between 2 and 20.
 
-# # 🌟 Exercise 1 — Random Sentence Generator
-# import random
+# 🌟 Exercise 1 — Random Sentence Generator
+import random
 
-# def get_words_from_file(file_path):
-#   # read file, split into words, return list
-#   with open(file_path, "r") as f:
-#     content = f.read()
+def get_words_from_file(file_path):
+  # read file, split into words, return list
+  with open(file_path, "r") as f:
+    content = f.read()
 
-#   return content.split() # returns a list of words
+  return content.split() # returns a list of words
 
-# def get_random_sentence(length):
-#     # pick random words, join, return lowercase
-#     words = get_words_from_file("week_3/words.txt")
-#     chosen = [random.choice(words) for _ in range(length)]
-#     return " ".join(chosen)
+def get_random_sentence(length):
+    # pick random words, join, return lowercase
+    words = get_words_from_file("/Users/rachiek/Developer/DI_Bootcamp/week_3/words.txt")
+    chosen = [random.choice(words) for _ in range(length)]
+    return " ".join(chosen)
 
-# def main():
-#     # get input, validate, generate sentence
-#     try:
-#       length = int(input("Enter sentence length (2-20): "))
-#     except ValueError:
-#       print("Invalid input! Please enter a number.")
-#       return
+def main():
+    # get input, validate, generate sentence
+    try:
+      length = int(input("Enter sentence length (2-20): "))
+    except ValueError:
+      print("Invalid input! Please enter a number.")
+      return
 
-#     if length < 2 or length > 20:
-#       print("Please enter a number between 2 and 20")
-#       return
+    if length < 2 or length > 20:
+      print("Please enter a number between 2 and 20")
+      return
 
-#     sentence = get_random_sentence(length)
-#     print(f"Generated sentence: {sentence}")
+    sentence = get_random_sentence(length)
+    print(f"Generated sentence: {sentence}")
 
-# main()
+main()
 
 # 🌟 Exercise 2: Working with JSON (~15 minutes)
 # Given this JSON string:
