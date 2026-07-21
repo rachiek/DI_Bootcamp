@@ -47,7 +47,7 @@
 # This magic method should return a string displaying the items on the current page, each on a new line.
 
 
-import math
+gitimport math
 
 class Pagination:
     def __init__(self, items=None, page_size=10):

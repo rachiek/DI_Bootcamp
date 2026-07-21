@@ -1,17 +1,15 @@
-a = 7
-b = 3
+# Create a func.py file with a function that sums two numbers and prints the result. Then, import and call the function from exercise_one.py.
 
-def calculation (a, b):
-    return(a+b, a-b)
+# Step 1: Create func.py
+# Create a file named func.py.
+# Define a function inside that file that takes two numbers as arguments, sums them, and prints the result.
 
-res = calculation(40,10)
-print (res)
+# Step 2: Create exercise_one.py
+# Create a file named exercise_one.py.
+# Import the function from func.py using one of the import syntaxes provided in the instructions.
+# Call the imported function with two numbers.
 
-tic_tac_toe_grid = [
-    [0, 1, 0, 1, 0],  # Row 0: White, Black, White, Black, White
-    [1, 1, 1, 1, 1],  # Row 1: All Black (horizontal line)
-    [0, 1, 0, 1, 0],  # Row 2: White, Black, White, Black, White
-    [1, 1, 1, 1, 1],  # Row 3: All Black (horizontal line)
-    [0, 1, 0, 1, 0]   # Row 4: White, Black, White, Black, White
-]
-print (tic_tac_toe_grid)
+def calculation (num1, num2):
+    result = num1 + num2
+    print(result)
+
